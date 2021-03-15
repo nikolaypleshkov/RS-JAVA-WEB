@@ -33,10 +33,7 @@
         <script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
         <script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.23912" type="text/javascript"></script>
         <script type="text/javascript">
-            JotForm.init(function(){
-              setTimeout(function() {
-                  $('input_7').hint('ex: myname@example.com');
-               }, 20);
+           ]
 
          JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
          JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
