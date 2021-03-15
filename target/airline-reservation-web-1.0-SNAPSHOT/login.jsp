@@ -26,11 +26,11 @@
 <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v2/css/main.css">
 
 </head>
-<body>
+<body style=" background-color: #0f1014;">
 <div class="limiter">
 <div class="container-login100">
 <div class="wrap-login100">
-<form class="login100-form validate-form">
+<form class="login100-form validate-form" action="login-servlet" method="POST">
 <span class="login100-form-title p-b-26">
 Welcome
 </span>
@@ -58,7 +58,7 @@ Login
 </div>
 <div class="text-center p-t-115">
 <span class="txt1">
-Don’t have an account?
+Create an account?
 </span>
 <a class="txt2" href="#">
 Sign Up
@@ -84,7 +84,7 @@ Sign Up
 
 <script src="vendor/countdowntime/countdowntime.js"></script>
 
-<script src="js/main.js"></script>
+<script src="https://colorlib.com/etc/lf/Login_v2/js/main.js"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>

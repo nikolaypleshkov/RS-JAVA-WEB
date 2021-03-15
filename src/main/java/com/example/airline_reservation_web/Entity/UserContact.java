@@ -9,6 +9,10 @@ public class UserContact {
         this.address = address;
     }
 
+    public UserContact() {
+
+    }
+
     public String getPhone_number() {
         return phone_number;
     }

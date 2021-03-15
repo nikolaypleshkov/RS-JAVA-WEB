@@ -15,6 +15,7 @@ public class DataBaseConfig {
     public DataBaseConfig(){
         connect();
     }
+
     public void connect(){
         try{
             Class.forName(DRIVER);
@@ -48,6 +49,8 @@ public class DataBaseConfig {
             return -1;
         }
     }
+
+
 
     public int delete(String query){
         try{

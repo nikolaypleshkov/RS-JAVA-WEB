@@ -6,13 +6,11 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/style.css" />
-
+    <link rel="stylesheet" href="/src/main/webapp/assets/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-    $( function() {
-      $( "#datepicker" ).datepicker();
-    } );
+    
     </script>
 </head>
 <body>
@@ -34,7 +32,42 @@
         <script src="https://cdn.jotfor.ms/js/vendor/jquery.maskedinput.min.js?v=3.3.23912" type="text/javascript"></script>
         <script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
         <script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.23912" type="text/javascript"></script>
-        
+        <script type="text/javascript">
+
+         JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+         JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+         JotForm.calendarOther = {"today":"Today"};
+         var languageOptions = document.querySelectorAll('#langList li');
+         for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) {
+           languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("17", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); }, 0); });
+         }
+         JotForm.setCalendar("17", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""});
+         JotForm.formatDate({date:(new Date()), dateField:$("id_"+17)});
+         JotForm.displayLocalTime("input_17_hourSelect", "input_17_minuteSelect","input_17_ampm", "input_17_timeInput", false);
+
+         JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+         JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+         JotForm.calendarOther = {"today":"Today"};
+         var languageOptions = document.querySelectorAll('#langList li');
+         for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) {
+           languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("18", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); }, 0); });
+         }
+         JotForm.setCalendar("18", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""});
+         JotForm.formatDate({date:(new Date()), dateField:$("id_"+18)});
+         JotForm.displayLocalTime("input_18_hourSelect", "input_18_minuteSelect","input_18_ampm", "input_18_timeInput", false);
+        if (window.JotForm && JotForm.accessible) $('input_13').setAttribute('tabindex',0);
+        if (window.JotForm && JotForm.accessible) $('input_14').setAttribute('tabindex',0);
+            JotForm.newDefaultTheme = true;
+            JotForm.extendsNewTheme = false;
+            JotForm.newPaymentUIForNewCreatedForms = false;
+            JotForm.newPaymentUI = true;
+            /*INIT-END*/
+            });
+
+           JotForm.prepareCalculationsOnTheFly([null,{"name":"clickTo","qid":"1","text":"Flight Reservation","type":"control_head"},{"name":"submit","qid":"2","text":"Reserve Flight","type":"control_button"},{"name":"passengerName","qid":"3","text":"Passenger Name","type":"control_fullname"},{"name":"dateOf","qid":"4","text":"Date of Birth","type":"control_birthdate"},{"name":"clickTo5","qid":"5","text":"Reservation Details","type":"control_head"},{"name":"contactPerson","qid":"6","text":"Contact Person","type":"control_fullname"},{"name":"email7","qid":"7","text":"E-mail","type":"control_email"},{"name":"phoneNumber8","qid":"8","text":"Phone Number","type":"control_phone"},{"name":"address9","qid":"9","text":"Address","type":"control_address"},null,{"name":"departingFrom","qid":"11","text":"Departing From","type":"control_dropdown"},{"name":"destination","qid":"12","text":"Destination","type":"control_dropdown"},{"name":"city","qid":"13","text":"City","type":"control_textbox"},{"name":"city14","qid":"14","text":"City","type":"control_textbox"},{"name":"airline","qid":"15","text":"Airline","type":"control_dropdown"},{"name":"fare","qid":"16","text":"Fare","type":"control_dropdown"},{"name":"departureDate17","qid":"17","text":"Departure Date & Time","type":"control_datetime"},{"name":"returnDate","qid":"18","text":"Return Date & Time","type":"control_datetime"},{"name":"pageBreak","qid":"19","text":"Page Break","type":"control_pagebreak"}]);
+           setTimeout(function() {
+        JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Flight Reservation","type":"control_head"},{"name":"submit","qid":"2","text":"Reserve Flight","type":"control_button"},{"name":"passengerName","qid":"3","text":"Passenger Name","type":"control_fullname"},{"name":"dateOf","qid":"4","text":"Date of Birth","type":"control_birthdate"},{"name":"clickTo5","qid":"5","text":"Reservation Details","type":"control_head"},{"name":"contactPerson","qid":"6","text":"Contact Person","type":"control_fullname"},{"name":"email7","qid":"7","text":"E-mail","type":"control_email"},{"name":"phoneNumber8","qid":"8","text":"Phone Number","type":"control_phone"},{"name":"address9","qid":"9","text":"Address","type":"control_address"},null,{"name":"departingFrom","qid":"11","text":"Departing From","type":"control_dropdown"},{"name":"destination","qid":"12","text":"Destination","type":"control_dropdown"},{"name":"city","qid":"13","text":"City","type":"control_textbox"},{"name":"city14","qid":"14","text":"City","type":"control_textbox"},{"name":"airline","qid":"15","text":"Airline","type":"control_dropdown"},{"name":"fare","qid":"16","text":"Fare","type":"control_dropdown"},{"name":"departureDate17","qid":"17","text":"Departure Date & Time","type":"control_datetime"},{"name":"returnDate","qid":"18","text":"Return Date & Time","type":"control_datetime"},{"name":"pageBreak","qid":"19","text":"Page Break","type":"control_pagebreak"}]);}, 20);
+        </script>
         <link type="text/css" media="print" rel="stylesheet" href="https://cdn.jotfor.ms/css/printForm.css?3.3.23912" />
         <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?themeRevisionID=5eb3b4ae85bd2e1e2966db96"/>
         <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/payment/payment_styles.css?3.3.23912" />
