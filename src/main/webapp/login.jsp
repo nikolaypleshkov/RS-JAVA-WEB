@@ -4,9 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/login.css" />
-	<link rel="stylesheet" href="/assets/login.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/style.css">
 </head>
 <body>
+
+	<nav class="stroke">
+		<ul>
+			<li><a href="home-servlet">Home</a></li>
+			<li><a href="#">About</a></li>
+		   <li><a href="#">Contact</a></li>
+		</ul>
+	  </nav>
+
 	<div id="id01" class="modal">
 		<form class="modal-content animate" action="login-servlet" method="post">
 		  <div class="imgcontainer">
@@ -27,7 +36,6 @@
 		  </div>
 	  
 		  <div class="container" style="">
-			<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
 			<span class="psw">Forgot <a href="#">password?</a></span>
 		  </div>
 		</form>

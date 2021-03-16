@@ -19,7 +19,7 @@
         <nav class="stroke">
           <ul>
               <li><a href="book-servlet">Book</a></li>
-              <li><a href="#">About</a></li>
+              <li><a href="register-user">About</a></li>
              <li><a href="#">Contact</a></li>
           </ul>
         </nav>

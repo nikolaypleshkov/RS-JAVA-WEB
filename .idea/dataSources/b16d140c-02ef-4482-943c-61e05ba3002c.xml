@@ -936,7 +936,11 @@ SELECT|sys.sys_config
       <Position>6</Position>
       <DataType>varchar(30)|0s</DataType>
     </column>
-    <key id="291" parent="284" name="PRIMARY">
+    <column id="291" parent="284" name="user_pass">
+      <Position>7</Position>
+      <DataType>varchar(30)|0s</DataType>
+    </column>
+    <key id="292" parent="284" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
