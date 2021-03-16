@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/login.css" />
+	<link rel="stylesheet" href="/assets/login.css">
 </head>
 <body>
 	<div id="id01" class="modal">
@@ -25,7 +26,7 @@
 			</label>
 		  </div>
 	  
-		  <div class="container" style="background-color:#f1f1f1">
+		  <div class="container" style="">
 			<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
 			<span class="psw">Forgot <a href="#">password?</a></span>
 		  </div>
