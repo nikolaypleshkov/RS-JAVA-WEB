@@ -19,7 +19,7 @@ public class TableSearch extends HttpServlet {
         if(req.getParameter("flight-search") != null){
             setFrom_city(req.getParameter("city_from"));
             setTo_city(req.getParameter("city_to"));
-
+            
         }
     }
 
