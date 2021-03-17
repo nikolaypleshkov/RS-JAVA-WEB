@@ -7,19 +7,24 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
-@WebServlet("/flights-list")
+@WebServlet("/add-list")
 public class TableSearch extends HttpServlet {
     private String from_city;
     private String to_city;
-
+   public ArrayList<String> destination = new ArrayList<>();
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if(req.getParameter("flight-search") != null){
+
             setFrom_city(req.getParameter("city_from"));
             setTo_city(req.getParameter("city_to"));
 
+            destination.add(getFrom_city());
+            destination.add(getTo_city());
+
+            resp.sendRedirect("flights-list.jsp");
         }
     }
 

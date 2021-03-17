@@ -1,9 +1,17 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Nikky
+  Date: 17.3.2021 г.
+  Time: 20:56
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.DriverManager" %>
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="com.example.airline_reservation_web.Entity.TableSearch" %>
+<%@ page import="com.example.airline_reservation_web.Entity.FetchData" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -21,8 +29,13 @@
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+
+    </script>
 </head>
 <body>
+
+
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">ArtiX Reservation</a>
@@ -47,7 +60,36 @@
     </div>
 </nav>
 
-<form method="">
+
+<div class="form-group" style="margin-top:5%;">
+    <h1 class="text-center">Flights</h1>
+</div>
+<div class="d-flex justify-content-center" >
+
+    <form action="${pageContext.request.contextPath}/add-list" method="get">
+        <div class="form-row">
+            <div class="col" style="width: 50%">
+                <input type="text" class="form-control" placeholder="Travelling To?" name="city_to">
+            </div>
+
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Travelling From?" name="city_from">
+            </div>
+            <div class="col">
+                <input class="form-control"  id="datepicker" placeholder="Travelling when?" />
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-dark" style="width: 60%;" name="flight-search">Search</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+<form action="/fetchdata" method="post">
     <div class="d-flex justify-content-center" style="margin-top: 5%;">
         <%
             try
@@ -57,8 +99,7 @@
                 Connection con=(Connection) DriverManager.getConnection(
                         "jdbc:mysql://localhost:3306/usersData","root","root");
                 Statement st=con.createStatement();
-                search.setTo_city("Berlin,Germany");
-                search.setFrom_city("Burgas,Bulgaria");
+                FetchData data = new FetchData();
                 ResultSet rs=st.executeQuery("select * from flights WHERE flight_from = 'Burgas,Bulgaria' AND flight_to = 'Berlin,Germany';");
         %>
         <table class="table" style="width: 50%">
@@ -69,7 +110,7 @@
                 <th scope="col">Flight Name</th>
                 <th scope="col">From</th>
                 <th scope="col">To</th>
-                <th scope="col">Date</th>
+                <th scope="col">Data</th>
                 <th scope="col">Time</th>
                 <th scope="col">Airport</th>
                 <th scope="col"></th>
@@ -103,5 +144,10 @@
 
     </div>
 </form>
+<script>
+    $('#datepicker').datepicker({
+        uiLibrary: 'bootstrap'
+    });
+</script>
 </body>
 </html>
