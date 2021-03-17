@@ -3,6 +3,7 @@
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.io.PrintWriter" %>
+<%@ page import="com.example.airline_reservation_web.Entity.TableSearch" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -57,76 +58,81 @@
 </div>
 <div class="d-flex justify-content-center" >
 
-  <form>
+  <form action="${pageContext.request.contextPath}/flights-list" method="post">
   <div class="form-row">
     <div class="col" style="width: 50%">
-      <input type="text" class="form-control" placeholder="Travelling To?">
+      <input type="text" class="form-control" placeholder="Travelling To?" name="city_to">
     </div>
 
     <div class="col">
-      <input type="text" class="form-control" placeholder="Travelling From?">
+      <input type="text" class="form-control" placeholder="Travelling From?" name="city_from">
     </div>
     <div class="col">
       <input class="form-control"  id="datepicker" placeholder="Travelling when?" />
     </div>
     <div class="col">
-      <button type="submit" class="btn btn-dark" style="width: 60%;">Search</button>
+      <button type="submit" class="btn btn-dark" style="width: 60%;" name="flight-search">Search</button>
     </div>
   </div>
 </form>
 </div>
 
-<div class="d-flex justify-content-center" style="margin-top: 5%;">
-  <%
-    try
-    {
-      Class.forName("com.mysql.jdbc.Driver");
-      Connection con=(Connection) DriverManager.getConnection(
-              "jdbc:mysql://localhost:3306/usersData","root","root");
-      Statement st=con.createStatement();
-      ResultSet rs=st.executeQuery("select * from flights;");
-  %>
-  <table class="table" style="width: 50%">
-    <thead class="thead-dark">
-
-    <tr>
-      <th scope="col">Flight №</th>
-      <th scope="col">Flight Name</th>
-      <th scope="col">From</th>
-      <th scope="col">To</th>
-      <th scope="col">Data</th>
-      <th scope="col">Time</th>
-      <th scope="col">Airport</th>
-      <th scope="col"></th>
-    </tr>
-    </thead>
-    <tbody>
-    <%while(rs.next()){%>
-    <tr>
-      <th scope="row"><%=rs.getString("flight_number") %></th>
-      <td><%=rs.getString("flight_name") %></td>
-      <td><%=rs.getString("flight_from") %></td>
-      <td><%=rs.getString("flight_to") %></td>
-      <td><%=rs.getString("flight_date") %></td>
-      <td><%=rs.getString("fligt_time") %></td>
-      <td><%=rs.getString("flight_airport") %></td>
-      <td><button type="submit" class="btn btn-dark">Book</button></td>
-    </tr>
+<form>
+  <div class="d-flex justify-content-center" style="margin-top: 5%;">
     <%
-        st.close();
-        con.close();
-    }%>
-    </tbody>
-  </table>
-  <%}
+      try
+      {
+        TableSearch search = new TableSearch();
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection con=(Connection) DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/usersData","root","root");
+        Statement st=con.createStatement();
+        ResultSet rs=st.executeQuery("select * from flights WHERE flight_from = '"+search.from_city+"' AND flight_to = '"+search.to_city+"';");
+    %>
+    <table class="table" style="width: 50%">
+      <thead class="thead-dark">
+
+      <tr>
+        <th scope="col">Flight №</th>
+        <th scope="col">Flight Name</th>
+        <th scope="col">From</th>
+        <th scope="col">To</th>
+        <th scope="col">Data</th>
+        <th scope="col">Time</th>
+        <th scope="col">Airport</th>
+        <th scope="col"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <%while(rs.next()){%>
+      <tr>
+        <th scope="row"><%=rs.getString("flight_number") %></th>
+        <td><%=rs.getString("flight_name") %></td>
+        <td><%=rs.getString("flight_from") %></td>
+        <td><%=rs.getString("flight_to") %></td>
+        <td><%=rs.getString("flight_date") %></td>
+        <td><%=rs.getString("fligt_time") %></td>
+        <td><%=rs.getString("flight_airport") %></td>
+        <td><button type="submit" class="btn btn-dark">Book</button></td>
+      </tr>
+      <%
+          st.close();
+          con.close();
+        }%>
+      </tbody>
+    </table>
+    <%}
     catch(Exception e){
       e.printStackTrace();
-  %><br><%
-  }
+    %><br><%
+    }
 
-%>
+  %>
 
-</div>
+  </div>
+</form>
+
+
 
 
 
