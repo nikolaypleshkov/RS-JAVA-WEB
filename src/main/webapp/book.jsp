@@ -87,7 +87,7 @@
         Connection con=(Connection) DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/usersData","root","root");
         Statement st=con.createStatement();
-        ResultSet rs=st.executeQuery("select * from flights WHERE flight_from = '"+search.getFrom_city()+"' AND flight_to = '"+search.getTo_city()+"';");
+        ResultSet rs=st.executeQuery("select * from flights WHERE flight_from = 'Burgas,Bulgaria' AND flight_to = 'Berlin,Germany';");
     %>
     <table class="table" style="width: 50%">
       <thead class="thead-dark">

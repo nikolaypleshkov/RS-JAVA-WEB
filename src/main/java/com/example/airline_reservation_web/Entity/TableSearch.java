@@ -19,18 +19,6 @@ public class TableSearch extends HttpServlet {
         if(req.getParameter("flight-search") != null){
             setFrom_city(req.getParameter("city_from"));
             setTo_city(req.getParameter("city_to"));
-            PrintWriter out = resp.getWriter();
-
-            out.print("<table class='table' style='width: 50%'");
-            out.print(" <thead class='thead-dark'>");
-            out.print("<tr>" +
-                    "<th scope='col'>Flight №</th><th scope='col'>Flight Name</th><th scope='col'>From</th><th scope='col'>To</th><th scope='col'>Date</th>" +
-                    "<th scope='col' >Time</th><th scope='col'>Airport</th></tr>");
-                out.print("<tr><td>"+getTo_city()+"</td><td>"+getFrom_city()+"</td></tr>");
-            out.print(" </thead>");
-            out.print("</table>");
-
-            out.close();
 
         }
     }
