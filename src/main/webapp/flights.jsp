@@ -67,7 +67,7 @@
                 <th scope="col">Flight Name</th>
                 <th scope="col">From</th>
                 <th scope="col">To</th>
-                <th scope="col">Data</th>
+                <th scope="col">Date</th>
                 <th scope="col">Time</th>
                 <th scope="col">Airport</th>
                 <th scope="col"></th>
