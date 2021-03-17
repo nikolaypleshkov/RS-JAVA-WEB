@@ -37,5 +37,43 @@
     </div>
 </nav>
 
+<!-------CONTACT FORM------->
+<div class="form-group">
+    <h1 class="text-center">Contact</h1>
+</div>
+
+<div class="d-flex justify-content-center">
+
+    <form style="width: 50%;">
+        <div class="form-group">
+            <label for="formGroupExampleInput">Name</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" name="name">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Email</label>
+            <input type="email" class="form-control" id="formGroupExampleInput2" name="email">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Subject</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" name="subject" >
+        </div>
+        <div class="col-auto my-1">
+            <label class="mr-sm-2" for="inlineFormCustomSelect">Reason</label>
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected></option>
+                <option value="1">Just to Say Hi</option>
+                <option value="2">Business</option>
+                <option value="3">Other</option>
+            </select>
+        </div>
+        <div class="form-group" style="width: auto;">
+            <label for="exampleFormControlTextarea1">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
+        </div>
+    </form>
+</div>
+<!-------/CONTACT FORM------->
+
+
 </body>
 </html>
