@@ -70,7 +70,7 @@
             <label for="exampleFormControlTextarea1">Message</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
         </div>
-        <button type="submit" class="btn btn-dark">Dark</button>
+        <button type="submit" class="btn btn-dark">Send</button>
     </form>
 
 </div>

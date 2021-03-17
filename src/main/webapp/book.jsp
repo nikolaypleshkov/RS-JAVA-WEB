@@ -1,3 +1,8 @@
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.DriverManager" %>
+<%@ page import="java.sql.Statement" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.io.PrintWriter" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -22,6 +27,7 @@
 <body>
 
 
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">ArtiX Reservation</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,10 +35,10 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="home-servlet">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="#">Booking</a>
       </li>
       <li class="nav-item">
@@ -45,6 +51,91 @@
   </div>
 </nav>
 
-      
+
+<div class="form-group" style="margin-top:5%;">
+  <h1 class="text-center">Flights</h1>
+</div>
+<div class="d-flex justify-content-center" >
+
+  <form>
+  <div class="form-row">
+    <div class="col" style="width: 50%">
+      <input type="text" class="form-control" placeholder="Travelling To?">
+    </div>
+
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Travelling From?">
+    </div>
+    <div class="col">
+      <input class="form-control"  id="datepicker" placeholder="Travelling when?" />
+    </div>
+    <div class="col">
+      <button type="submit" class="btn btn-dark" style="width: 60%;">Search</button>
+    </div>
+  </div>
+</form>
+</div>
+
+<div class="d-flex justify-content-center" style="margin-top: 5%;">
+  <%
+    try
+    {
+      Class.forName("com.mysql.jdbc.Driver");
+      Connection con=(Connection) DriverManager.getConnection(
+              "jdbc:mysql://localhost:3306/usersData","root","root");
+      Statement st=con.createStatement();
+      ResultSet rs=st.executeQuery("select * from flights;");
+  %>
+  <table class="table" style="width: 50%">
+    <thead class="thead-dark">
+
+    <tr>
+      <th scope="col">Flight №</th>
+      <th scope="col">Flight Name</th>
+      <th scope="col">From</th>
+      <th scope="col">To</th>
+      <th scope="col">Data</th>
+      <th scope="col">Time</th>
+      <th scope="col">Airport</th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <%while(rs.next()){%>
+    <tr>
+      <th scope="row"><%=rs.getString("flight_number") %></th>
+      <td><%=rs.getString("flight_name") %></td>
+      <td><%=rs.getString("flight_from") %></td>
+      <td><%=rs.getString("flight_to") %></td>
+      <td><%=rs.getString("flight_date") %></td>
+      <td><%=rs.getString("fligt_time") %></td>
+      <td><%=rs.getString("flight_airport") %></td>
+      <td><button type="submit" class="btn btn-dark">Book</button></td>
+    </tr>
+    <%
+        st.close();
+        con.close();
+    }%>
+    </tbody>
+  </table>
+  <%}
+    catch(Exception e){
+      e.printStackTrace();
+  %><br><%
+  }
+
+%>
+
+</div>
+
+
+
+<script>
+  $('#datepicker').datepicker({
+    uiLibrary: 'bootstrap'
+  });
+</script>
+
+
 </body>
 </html>
