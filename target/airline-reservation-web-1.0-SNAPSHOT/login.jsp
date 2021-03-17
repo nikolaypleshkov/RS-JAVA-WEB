@@ -38,6 +38,7 @@
 		  <div class="container" style="">
 			<span class="psw">Forgot <a href="#">password?</a></span>
 		  </div>
+			<button type="submit" class="btn btn-dark">Dark</button>
 		</form>
 	  </div>
 </body>

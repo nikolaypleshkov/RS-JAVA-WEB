@@ -44,7 +44,7 @@
 
 <div class="d-flex justify-content-center">
 
-    <form style="width: 50%;">
+    <form style="width: 50%;" action="servlet/EmailSender">
         <div class="form-group">
             <label for="formGroupExampleInput">Name</label>
             <input type="text" class="form-control" id="formGroupExampleInput" name="name">
@@ -70,7 +70,9 @@
             <label for="exampleFormControlTextarea1">Message</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
         </div>
+        <button type="submit" class="btn btn-dark">Dark</button>
     </form>
+
 </div>
 <!-------/CONTACT FORM------->
 

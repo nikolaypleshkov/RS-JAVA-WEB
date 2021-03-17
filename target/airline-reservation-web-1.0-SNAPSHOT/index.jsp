@@ -44,18 +44,18 @@
 
 <div class="d-flex justify-content-center">
 
-    <form style="width: 50%;">
+    <form style="width: 50%;" action="servlet/EmailSender">
         <div class="form-group">
             <label for="formGroupExampleInput">Name</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" ">
+            <input type="text" class="form-control" id="formGroupExampleInput" name="name">
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput2">Email</label>
-            <input type="email" class="form-control" id="formGroupExampleInput2" >
+            <input type="email" class="form-control" id="formGroupExampleInput2" name="email">
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput">Subject</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" >
+            <input type="text" class="form-control" id="formGroupExampleInput" name="subject" >
         </div>
         <div class="col-auto my-1">
             <label class="mr-sm-2" for="inlineFormCustomSelect">Reason</label>
@@ -68,9 +68,11 @@
         </div>
         <div class="form-group" style="width: auto;">
             <label for="exampleFormControlTextarea1">Message</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
         </div>
+        <button type="submit" class="btn btn-dark">Dark</button>
     </form>
+
 </div>
 <!-------/CONTACT FORM------->
 
