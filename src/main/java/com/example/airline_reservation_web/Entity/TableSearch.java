@@ -1,6 +1,5 @@
 package com.example.airline_reservation_web.Entity;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,19 +14,13 @@ public class TableSearch extends HttpServlet {
     private String to_city;
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         if(req.getParameter("flight-search") != null){
             setFrom_city(req.getParameter("city_from"));
             setTo_city(req.getParameter("city_to"));
 
-
-            RequestDispatcher rd = req.getRequestDispatcher("flights.jsp");
         }
-    }
-    protected void doPost(HttpServletRequest request,
-                          HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
     }
 
     public String getFrom_city() {
