@@ -77,65 +77,6 @@
 </form>
 </div>
 
-<form>
-  <div class="d-flex justify-content-center" style="margin-top: 5%;">
-    <%
-      try
-      {
-        TableSearch search = new TableSearch();
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection con=(Connection) DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/usersData","root","root");
-        Statement st=con.createStatement();
-        ResultSet rs=st.executeQuery("select * from flights WHERE flight_from = '"+search.getFrom_city()+"' AND flight_to = '"+search.getTo_city()+"';");
-    %>
-    <table class="table" style="width: 50%">
-      <thead class="thead-dark">
-
-      <tr>
-        <th scope="col">Flight №</th>
-        <th scope="col">Flight Name</th>
-        <th scope="col">From</th>
-        <th scope="col">To</th>
-        <th scope="col">Data</th>
-        <th scope="col">Time</th>
-        <th scope="col">Airport</th>
-        <th scope="col"></th>
-      </tr>
-      </thead>
-      <tbody>
-      <%while(rs.next()){%>
-      <tr>
-        <th scope="row"><%=rs.getString("flight_number") %></th>
-        <td><%=rs.getString("flight_name") %></td>
-        <td><%=rs.getString("flight_from") %></td>
-        <td><%=rs.getString("flight_to") %></td>
-        <td><%=rs.getString("flight_date") %></td>
-        <td><%=rs.getString("fligt_time") %></td>
-        <td><%=rs.getString("flight_airport") %></td>
-        <td><button type="submit" class="btn btn-dark">Book</button></td>
-      </tr>
-      <%
-          st.close();
-          con.close();
-        }%>
-      </tbody>
-    </table>
-    <%}
-    catch(Exception e){
-      e.printStackTrace();
-    %><br><%
-    }
-
-  %>
-
-  </div>
-</form>
-
-
-
-
-
 <script>
   $('#datepicker').datepicker({
     uiLibrary: 'bootstrap'
