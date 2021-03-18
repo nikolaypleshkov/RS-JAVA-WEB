@@ -89,7 +89,7 @@
 
 
 
-<form action="/add-list" method="get">
+<form action="/fetchdata" method="post">
     <div class="d-flex justify-content-center" style="margin-top: 5%;">
         <%
             try
@@ -100,7 +100,7 @@
                         "jdbc:mysql://localhost:3306/usersData","root","root");
                 Statement st=con.createStatement();
                 FetchData data = new FetchData();
-                ResultSet rs=st.executeQuery("select * from flights WHERE flight_from = '"+search.getFrom_city()+"' AND flight_to = '"+search.getTo_city()+"';");
+                ResultSet rs=st.executeQuery("select * from flights WHERE flight_from = '"+data.getFrom()+"' AND flight_to = '"+data.getTo()+"';");
         %>
         <table class="table" style="width: 50%">
             <thead class="thead-dark">
