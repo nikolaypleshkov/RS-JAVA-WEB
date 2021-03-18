@@ -28,11 +28,7 @@ public class Mailer {
             msg.setSubject(subject);
             msg.setText(message);
 
-            //3rd step)send message  
             Transport.send(msg);
-
-            System.out.println("Done");
-
         }
         catch (MessagingException e ){
             throw new RuntimeException(e);
