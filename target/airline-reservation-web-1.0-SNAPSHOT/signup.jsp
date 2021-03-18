@@ -39,7 +39,7 @@
                       Account
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#">Sign In</a>
+                      <a class="dropdown-item" href="/signin">Sign In</a>
                       <a class="dropdown-item" href="#">Create Account</a>
                       <a class="dropdown-item" href="#" style="display: none;">Logout</a>
                     </div>
