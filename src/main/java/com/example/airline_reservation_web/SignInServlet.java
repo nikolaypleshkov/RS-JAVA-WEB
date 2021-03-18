@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "Login", value = "/signin-servlet")
+@WebServlet(name = "LoginServlet", value = "/signin-servlet")
 public class SignInServlet extends HttpServlet {
     public void init() {
 

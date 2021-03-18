@@ -53,7 +53,7 @@
         <h1 class="text-center">Sign Up</h1>
     </div>
 
-    <div class="d-flex justify-content-center" >
+    <div class="d-flex justify-content-center" style="margin-top: 1.5%" >
         <form action="register-user" method="post">
             <div class="form-group">
                 <label for="fname">First Name</label>
