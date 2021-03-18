@@ -8,7 +8,13 @@ import java.io.IOException;
 
 @WebServlet(name = "Login", value = "/signin")
 public class SignInServlet extends HttpServlet {
+    public void init() {
+
+    }
+
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.sendRedirect("signin.jsp");
+    }
+    public void destroy() {
     }
 }
