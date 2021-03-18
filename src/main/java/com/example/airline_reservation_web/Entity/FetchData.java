@@ -10,11 +10,30 @@ import java.io.IOException;
 @WebServlet("/fetchdata")
 public class FetchData extends HttpServlet {
     TableSearch search = new TableSearch();
-    public String from;
-    public String to;
+    private String from;
+    private String to;
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-         from ="Burgas,Bulgaria";
-         to = "Berlin,Germany";
+        setFrom("Burgas,Bulgaria");
+        setTo("Berlin,Germany");
+
+        System.out.println(getFrom()+" "+getTo());
+
+    }
+
+    public String getFrom() {
+        return from;
+    }
+
+    public void setFrom(String from) {
+        this.from = from;
+    }
+
+    public String getTo() {
+        return to;
+    }
+
+    public void setTo(String to) {
+        this.to = to;
     }
 }

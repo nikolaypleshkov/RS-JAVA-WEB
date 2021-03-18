@@ -18,12 +18,8 @@ public class TableSearch extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if(req.getParameter("flight-search") != null){
 
-            setFrom_city(req.getParameter("city_from"));
-            setTo_city(req.getParameter("city_to"));
-
-            destination.add(getFrom_city());
-            destination.add(getTo_city());
-
+            setFrom_city("Burgas,Bulgaria");
+            setTo_city("Berlin,Germany");
             resp.sendRedirect("flights-list.jsp");
         }
     }

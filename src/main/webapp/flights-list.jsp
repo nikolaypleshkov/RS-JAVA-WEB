@@ -100,7 +100,7 @@
                         "jdbc:mysql://localhost:3306/usersData","root","root");
                 Statement st=con.createStatement();
                 FetchData data = new FetchData();
-                ResultSet rs=st.executeQuery("select * from flights WHERE flight_from = 'Burgas,Bulgaria' AND flight_to = 'Berlin,Germany';");
+                ResultSet rs=st.executeQuery("select * from flights WHERE flight_from = '"+data.getFrom()+"' AND flight_to = '"+data.getTo()+"';");
         %>
         <table class="table" style="width: 50%">
             <thead class="thead-dark">
