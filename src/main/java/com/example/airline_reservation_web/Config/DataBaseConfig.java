@@ -2,6 +2,7 @@ package com.example.airline_reservation_web.Config;
 
 
 import com.example.airline_reservation_web.Entity.User;
+import com.example.airline_reservation_web.bean.RegisterBean;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,12 +20,22 @@ public class DataBaseConfig extends HttpServlet {
     static final String USER = "root";
     static final String PASSWORD = "root";
 
-    protected static Connection configDataBase() throws SQLException ,ClassNotFoundException{
-
-       Class.forName(DRIVER);
-       Connection conection = DriverManager.getConnection(URL,USER,PASSWORD);
-
-       return conection;
+    public static Connection createConnection(){
+        Connection con = null;
+        try{
+            try{
+                Class.forName(DRIVER);
+            }
+            catch (ClassNotFoundException e){
+                e.printStackTrace();
+            }
+            con=DriverManager.getConnection(URL,USER,PASSWORD);
+            System.out.println("Connection to object: "+con);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return con;
     }
+
 
 }

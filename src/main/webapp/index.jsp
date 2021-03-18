@@ -34,12 +34,12 @@
                 <a class="nav-link " href="#">Contact</a>
             </li>
             <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Account
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="/signin">Sign In</a>
-            <a class="dropdown-item" href="/signup">Create Account</a>
+            <a class="dropdown-item" href="signin-servlet">Sign In</a>
+            <a class="dropdown-item" href="signup-servlet">Create Account</a>
             <a class="dropdown-item" href="#" style="display: none;">Logout</a>
         </div>
       </li>

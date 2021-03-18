@@ -125,36 +125,6 @@
         <td><%=rs.getString("flight_airport") %></td>
         <td><button type="submit" class="btn btn-dark">Book</button></td>
       </tr>
-      <tr>
-        <th scope="row"><%=rs.getString("flight_number") %></th>
-        <td><%=rs.getString("flight_name") %></td>
-        <td><%=rs.getString("flight_from") %></td>
-        <td><%=rs.getString("flight_to") %></td>
-        <td><%=rs.getString("flight_date") %></td>
-        <td><%=rs.getString("fligt_time") %></td>
-        <td><%=rs.getString("flight_airport") %></td>
-        <td><button type="submit" class="btn btn-dark">Book</button></td>
-      </tr>
-      <tr>
-        <th scope="row"><%=rs.getString("flight_number") %></th>
-        <td><%=rs.getString("flight_name") %></td>
-        <td><%=rs.getString("flight_from") %></td>
-        <td><%=rs.getString("flight_to") %></td>
-        <td><%=rs.getString("flight_date") %></td>
-        <td><%=rs.getString("fligt_time") %></td>
-        <td><%=rs.getString("flight_airport") %></td>
-        <td><button type="submit" class="btn btn-dark">Book</button></td>
-      </tr>
-      <tr>
-        <th scope="row"><%=rs.getString("flight_number") %></th>
-        <td><%=rs.getString("flight_name") %></td>
-        <td><%=rs.getString("flight_from") %></td>
-        <td><%=rs.getString("flight_to") %></td>
-        <td><%=rs.getString("flight_date") %></td>
-        <td><%=rs.getString("fligt_time") %></td>
-        <td><%=rs.getString("flight_airport") %></td>
-        <td><button type="submit" class="btn btn-dark">Book</button></td>
-      </tr>
       <%
           st.close();
           con.close();

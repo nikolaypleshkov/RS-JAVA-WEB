@@ -24,10 +24,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/home-servlet">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="home-servlet">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/book-servlet">Booking</a>
+                    <a class="nav-link" href="book-servlet">Booking</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
@@ -40,7 +40,7 @@
                       Account
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="/signin">Sign In</a>
+                      <a class="dropdown-item" href="signin-servlet">Sign In</a>
                       <a class="dropdown-item" href="#">Create Account</a>
                       <a class="dropdown-item" href="#" style="display: none;">Logout</a>
                     </div>
@@ -49,14 +49,14 @@
         </div>
     </nav>
     <div class="d-flex justify-content-center" style="margin-top: 10%;">
-        <form>
+        <form action="register-user" method="post">
             <div class="form-group">
                 <label for="fname">First Name</label>
                 <input type="text" class="form-control" id="fname" name="first_name" aria-describedby="emailHelp" placeholder="Enter first name">
               </div>
               <div class="form-group">
                 <label for="sname">Last Name</label>
-                <input type="text" class="form-control"  id="sname name="last_name" aria-describedby="emailHelp" placeholder="Enter last name">
+                <input type="text" class="form-control"  id="sname" name="last_name" aria-describedby="emailHelp" placeholder="Enter last name">
               </div>  
               <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>

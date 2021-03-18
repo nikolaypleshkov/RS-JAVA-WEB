@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/home-servlet">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="home-servlet">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="book-servlet">Booking</a>
@@ -41,7 +41,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                       <a class="dropdown-item" href="#">Sign In</a>
-                      <a class="dropdown-item" href="/signup">Create Account</a>
+                      <a class="dropdown-item" href="signup-servlet">Create Account</a>
                       <a class="dropdown-item" href="#" style="display: none;">Logout</a>
                     </div>
                   </li>

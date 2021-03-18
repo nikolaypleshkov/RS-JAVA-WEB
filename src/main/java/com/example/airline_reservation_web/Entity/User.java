@@ -1,32 +1,12 @@
 package com.example.airline_reservation_web.Entity;
 
-public class User extends UserContact{
-    private String title;
+public class User {
     private String first_name;
     private String last_name;
     private String email;
     private String password;
+    private String date_of_birth;
 
-    public User(String phone_number, String address, String title, String first_name, String last_name, String email, String password) {
-        super(phone_number, address);
-        this.title = title;
-        this.first_name = first_name;
-        this.last_name = last_name;
-        this.email = email;
-        this.password = password;
-    }
-
-    public User() {
-        super();
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
     public String getFirst_name() {
         return first_name;
@@ -58,5 +38,13 @@ public class User extends UserContact{
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getDate_of_birth() {
+        return date_of_birth;
+    }
+
+    public void setDate_of_birth(String date_of_birth) {
+        this.date_of_birth = date_of_birth;
     }
 }
