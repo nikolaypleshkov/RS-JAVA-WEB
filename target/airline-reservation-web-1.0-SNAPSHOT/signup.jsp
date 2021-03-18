@@ -48,7 +48,12 @@
             </ul>
         </div>
     </nav>
-    <div class="d-flex justify-content-center" style="margin-top: 10%;">
+
+    <div class="form-group" style="margin-top:5%;">
+        <h1 class="text-center">Sign Up</h1>
+    </div>
+
+    <div class="d-flex justify-content-center" >
         <form action="register-user" method="post">
             <div class="form-group">
                 <label for="fname">First Name</label>

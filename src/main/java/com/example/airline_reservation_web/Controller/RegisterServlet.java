@@ -34,7 +34,7 @@ public class RegisterServlet extends HttpServlet {
 
         String userRegistered = regDao.registerUser(user);
 
-        if(userRegistered.equals("registered")){
+        if(userRegistered.equals("registered!")){
             req.getRequestDispatcher("signin.jsp").forward(req,resp);
         }
         else{

@@ -48,6 +48,11 @@
             </ul>
         </div>
     </nav>
+
+    <div class="form-group" style="margin-top:5%;">
+        <h1 class="text-center">Sign In</h1>
+    </div>
+
     <div class="d-flex justify-content-center" style="margin-top: 10%;">
         <form>
             <div class="form-group">
