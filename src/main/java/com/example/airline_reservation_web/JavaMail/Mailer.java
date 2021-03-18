@@ -9,8 +9,8 @@ import javax.mail.internet.MimeMessage;
 public class Mailer {
 
     public static void send(String name,String from, String subject, String message){
-        final String reciver = "xxxxxxx@xxxx.xxxxx";
-        final String password = "xxxxxxxxxxx";
+        final String reciver = "xxxxxxxxxx@xxxxxx";
+        final String password = "xxxxxxxxxxxxxxx";
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");//change accordingly
         props.put("mail.smtp.auth", "true");

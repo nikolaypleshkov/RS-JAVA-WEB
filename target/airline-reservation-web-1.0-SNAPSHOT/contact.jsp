@@ -53,7 +53,7 @@
 
 <div class="d-flex justify-content-center">
 
-    <form style="width: 50%;" action="servlet/EmailSender">
+    <form style="width: 50%;" action="email-servlet" method="get">
         <div class="form-group">
             <label for="formGroupExampleInput">Name</label>
             <input type="text" class="form-control" id="formGroupExampleInput" name="name">
