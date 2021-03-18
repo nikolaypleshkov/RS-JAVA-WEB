@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
         }
         else{
             req.setAttribute("Error",userLogin);
-            out.print("<h1>Wrong Emai/Password</h1>");
+            out.print("<h1>Wrong Email/Password</h1>");
 
         }
     }
