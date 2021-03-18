@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -50,16 +50,28 @@
     <div class="d-flex justify-content-center" style="margin-top: 10%;">
         <form>
             <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" class="form-control" id="fname" name="first_name" aria-describedby="emailHelp" placeholder="Enter first name">
+              </div>
+              <div class="form-group">
+                <label for="sname">Last Name</label>
+                <input type="text" class="form-control"  id="sname name="last_name" aria-describedby="emailHelp" placeholder="Enter last name">
+              </div>  
+              <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email">
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              <input type="password" class="form-control" id="exampleInputPassword1" name="pass" placeholder="Password">
             </div>
-            <button type="submit" class="btn btn-dark">Sign In</button>
+            <div class="form-group">
+                <label for="datepicker">Date of birth</label>
+                <input class="form-control"  id="datepicker" name="date" placeholder="dd/mm/yyyy" />
+            </div>
+            <button type="submit" class="btn btn-dark">Sign Up</button>
           </form>
     </div>
+
 </body>
 </html>
