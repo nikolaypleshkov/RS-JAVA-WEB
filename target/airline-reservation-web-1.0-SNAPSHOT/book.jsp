@@ -1,8 +1,5 @@
-<%@ page import="java.sql.Connection" %>
-<%@ page import="java.sql.DriverManager" %>
-<%@ page import="java.sql.Statement" %>
-<%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.io.PrintWriter" %>
+<%@ page import="java.sql.*" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -99,29 +96,28 @@
     %>
     <table class="table" style="width: 50%">
       <thead class="thead-dark">
-
+      <% ResultSetMetaData resultSetMetaData = rs.getMetaData();
+        int total = resultSetMetaData.getColumnCount();
+      %>
       <tr>
-        <th scope="col">Flight №</th>
-        <th scope="col">Flight Name</th>
-        <th scope="col">From</th>
-        <th scope="col">To</th>
-        <th scope="col">Data</th>
-        <th scope="col">Time</th>
-        <th scope="col">Airport</th>
-        <th scope="col"></th>
+        <%
+          for(int i = 2; i <= total; i++){
+        %>
+        <th scope="col"><%=resultSetMetaData.getColumnName(i)%></th>
+        <% } %>
       </tr>
       </thead>
       <tbody>
       <%while(rs.next()){%>
       <tr>
-        <th scope="row"><%=rs.getString("flight_number") %></th>
-        <td><%=rs.getString("flight_name") %></td>
-        <td><%=rs.getString("flight_from") %></td>
-        <td><%=rs.getString("flight_to") %></td>
-        <td><%=rs.getString("flight_date") %></td>
-        <td><%=rs.getString("fligt_time") %></td>
-        <td><%=rs.getString("flight_airport") %></td>
-        <td><button type="submit" class="btn btn-dark">Book</button></td>
+        <th scope="row"><%=rs.getString(2) %></th>
+        <td scope="row"><%=rs.getString(3) %></td>
+        <td scope="row"><%=rs.getString(4) %></td>
+        <td scope="row"><%=rs.getString(5) %></td>
+        <td scope="row"><%=rs.getString(6) %></td>
+        <td scope="row"><%=rs.getString(7) %></td>
+        <td scope="row"><%=rs.getString(8) %></td>
+
       </tr>
       <%
           st.close();
