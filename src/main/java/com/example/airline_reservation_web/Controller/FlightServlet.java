@@ -45,7 +45,15 @@ public class FlightServlet extends HttpServlet {
                 out.print("</tr>");
 
                 while(flightDao.rs().next()){
-                    out.print("<tr><td>"+flightDao.rs().getString(1)+"</td><td>"+flightDao.rs().getString(2)+"</td><td>"+flightDao.rs().getString(3)+"</td><td>"+flightDao.rs().getString(4)+"</td><td>"+flightDao.rs().getString(5)+"</td><td>"+flightDao.rs().getString(6)+"</td><td>"+flightDao.rs().getString(7)+"</td><td>");
+                    out.print("<tr>
+                    <td>"+flightDao.rs().getString(1)+"</td>
+                    <td>"+flightDao.rs().getString(2)+"</td>
+                    <td>"+flightDao.rs().getString(3)+"</td>
+                    <td>"+flightDao.rs().getString(4)+"</td>
+                    <td>"+flightDao.rs().getString(5)+"</td>
+                    <td>"+flightDao.rs().getString(6)+"</td>
+                    <td>"+flightDao.rs().getString(7)+"</td>
+                    <td>");
                 }
                 out.print("</table>");
 

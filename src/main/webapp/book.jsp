@@ -88,6 +88,7 @@
     <%
       try
       {
+
         Class.forName("com.mysql.jdbc.Driver");
         Connection con=(Connection) DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/usersData","root","root");
@@ -112,25 +113,20 @@
       </tr>
       </thead>
       <tbody>
-      <%while(rs.next()){%>
+      <%while(rs.next()){
+        int count = rs.getInt(5);
+      %>
+      <%for(int i = 1; i<=count; i++ ){%>
       <tr>
-        <th scope="row"><%=rs.getString(2) %></th>
-        <td scope="row"><%=rs.getString(3) %></td>
-        <td scope="row"><%=rs.getString(4) %></td>
-        <td scope="row"><%=rs.getString(5) %></td>
-        <td scope="row"><%=rs.getString(6) %></td>
-        <td scope="row"><%=rs.getString(7) %></td>
-        <td scope="row"><%=rs.getString(8) %></td>
+        <th scope="row"><%=rs.getString("flight_number") %></th>
+        <td scope="row"><%=rs.getString("flight_name") %></td>
+        <td scope="row"><%=rs.getString("flight_from") %></td>
+        <td scope="row"><%=rs.getString("flight_to") %></td>
+        <td scope="row"><%=rs.getString("flight_date") %></td>
+        <td scope="row"><%=rs.getString("fligt_time") %></td>
+        <td scope="row"><%=rs.getString("flight_airport") %></td>
       </tr>
-      <tr>
-        <th scope="row"><%=rs.getString(2) %></th>
-        <td scope="row"><%=rs.getString(3) %></td>
-        <td scope="row"><%=rs.getString(4) %></td>
-        <td scope="row"><%=rs.getString(5) %></td>
-        <td scope="row"><%=rs.getString(6) %></td>
-        <td scope="row"><%=rs.getString(7) %></td>
-        <td scope="row"><%=rs.getString(8) %></td>
-      </tr>
+      <%}%>
       <%
           st.close();
           con.close();
