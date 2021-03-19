@@ -3,7 +3,6 @@
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.io.PrintWriter" %>
-<%@ page import="com.example.airline_reservation_web.Entity.TableSearch" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -87,12 +86,11 @@
 </form>
 </div>
 
-<form action="/fetchdata" method="post">
+<form>
   <div class="d-flex justify-content-center" style="margin-top: 5%;">
     <%
       try
       {
-        TableSearch search = new TableSearch();
         Class.forName("com.mysql.jdbc.Driver");
         Connection con=(Connection) DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/usersData","root","root");

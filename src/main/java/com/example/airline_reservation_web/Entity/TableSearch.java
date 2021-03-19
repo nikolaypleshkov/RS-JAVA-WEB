@@ -1,4 +1,4 @@
-package com.example.airline_reservation_web.Entity;
+/* package com.example.airline_reservation_web.Entity;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,7 +17,7 @@ public class TableSearch extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
       resp.setContentType("text/html");
       PrintWriter out = resp.getWriter();
-      String from = "Burgas,Bulgaria";
+      String from = "sdsd,Bulgaria";
       String to = "Berlin,Germany";
 
         try
@@ -58,3 +58,5 @@ public class TableSearch extends HttpServlet {
     }
 
 }
+
+ */
