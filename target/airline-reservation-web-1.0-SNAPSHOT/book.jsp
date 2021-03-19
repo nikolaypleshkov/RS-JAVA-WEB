@@ -100,11 +100,15 @@
         int total = resultSetMetaData.getColumnCount();
       %>
       <tr>
-        <%
-          for(int i = 2; i <= total; i++){
-        %>
-        <th scope="col"><%=resultSetMetaData.getColumnName(i)%></th>
-        <% } %>
+        <th scope="col">Flight №</th>
+        <th scope="col">Flight Name</th>
+        <th scope="col">From</th>
+        <th scope="col">To</th>
+        <th scope="col">Data</th>
+        <th scope="col">Time</th>
+        <th scope="col">Airport</th>
+        <th scope="col"></th>
+
       </tr>
       </thead>
       <tbody>
@@ -117,7 +121,15 @@
         <td scope="row"><%=rs.getString(6) %></td>
         <td scope="row"><%=rs.getString(7) %></td>
         <td scope="row"><%=rs.getString(8) %></td>
-
+      </tr>
+      <tr>
+        <th scope="row"><%=rs.getString(2) %></th>
+        <td scope="row"><%=rs.getString(3) %></td>
+        <td scope="row"><%=rs.getString(4) %></td>
+        <td scope="row"><%=rs.getString(5) %></td>
+        <td scope="row"><%=rs.getString(6) %></td>
+        <td scope="row"><%=rs.getString(7) %></td>
+        <td scope="row"><%=rs.getString(8) %></td>
       </tr>
       <%
           st.close();

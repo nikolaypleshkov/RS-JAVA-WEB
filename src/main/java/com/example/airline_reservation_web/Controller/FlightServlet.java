@@ -1,4 +1,4 @@
-package com.example.airline_reservation_web.Controller;
+/*package com.example.airline_reservation_web.Controller;
 
 import com.example.airline_reservation_web.Entity.Flight;
 import com.example.airline_reservation_web.UserDao.FlightDao;
@@ -57,3 +57,5 @@ public class FlightServlet extends HttpServlet {
 
     }
 }
+
+ */
