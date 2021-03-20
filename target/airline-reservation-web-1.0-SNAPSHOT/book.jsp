@@ -49,8 +49,8 @@
           Account
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="/signin">Sign In</a>
-          <a class="dropdown-item" href="/signup">Create Account</a>
+          <a class="dropdown-item" href="signin">Sign In</a>
+          <a class="dropdown-item" href="signup">Create Account</a>
           <a class="dropdown-item" href="#" style="display: none;">Logout</a>
         </div>
       </li>
@@ -124,7 +124,7 @@
         <td scope="row"><%=rs.getString(6) %></td>
         <td scope="row"><%=rs.getString(7) %></td>
         <td scope="row"><%=rs.getString(8) %></td>
-        <td scope="row"> <button type="submit" class="btn btn-dark" style="width: 60%;" name="book-btn" value="booking">Book</button></td>
+        <td scope="row"> <button class="btn btn-dark" style="width: 60%;" name="book-btn" href="booking">Book</button></td>
       </tr>
 
       <%
