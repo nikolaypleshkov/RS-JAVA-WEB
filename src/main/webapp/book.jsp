@@ -115,17 +115,18 @@
       <tbody>
       <%while(rs.next()){
       %>
-
-      <tr>
-        <th scope="row"><%=rs.getString(2) %></th>
-        <td scope="row"><%=rs.getString(3) %></td>
-        <td scope="row"><%=rs.getString(4) %></td>
-        <td scope="row"><%=rs.getString(5) %></td>
-        <td scope="row"><%=rs.getString(6) %></td>
-        <td scope="row"><%=rs.getString(7) %></td>
-        <td scope="row"><%=rs.getString(8) %></td>
-        <td scope="row"> <button class="btn btn-dark" style="width: 60%;" name="book-btn" href="booking">Book</button></td>
-      </tr>
+      <form method="post" action="booking">
+        <tr>
+          <th scope="row"><%=rs.getString(2) %></th>
+          <td scope="row"><%=rs.getString(3) %></td>
+          <td scope="row"><%=rs.getString(4) %></td>
+          <td scope="row"><%=rs.getString(5) %></td>
+          <td scope="row"><%=rs.getString(6) %></td>
+          <td scope="row"><%=rs.getString(7) %></td>
+          <td scope="row"><%=rs.getString(8) %></td>
+          <td scope="row"> <button type="submit" class="btn btn-dark" name="book-btn">Book</button></td>
+        </tr>
+      </form>
 
       <%
           st.close();
