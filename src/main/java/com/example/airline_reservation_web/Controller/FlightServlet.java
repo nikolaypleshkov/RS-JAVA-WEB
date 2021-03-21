@@ -30,6 +30,8 @@ public class FlightServlet extends HttpServlet {
         flight.setAirline(airline);
         flight.setAirport(airport);
 
+        resp.sendRedirect("book-form.jsp");
+
     }
 }
 

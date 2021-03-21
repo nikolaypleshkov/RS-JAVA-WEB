@@ -83,7 +83,7 @@
 </form>
 </div>
 
-<form>
+<form method="get" action="add-list">
   <div class="d-flex justify-content-center" style="margin-top: 5%;">
     <%
       try
@@ -123,7 +123,7 @@
           <td scope="row" name = "date"><%=rs.getString(6) %></td>
           <td scope="row" name = "time"><%=rs.getString(7) %></td>
           <td scope="row" name="airport-td"><%=rs.getString(8) %></td>
-          <td scope="row"> <a class="btn btn-dark" href="booking">Book</a></td>
+          <td scope="row"> <button class="btn btn-dark" type="submit">Book</button></td>
         </tr>
       <%
           st.close();

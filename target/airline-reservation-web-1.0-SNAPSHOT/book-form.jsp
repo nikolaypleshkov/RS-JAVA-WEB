@@ -1,3 +1,6 @@
+<%@ page import="com.example.airline_reservation_web.Controller.FlightServlet" %>
+<%@ page import="com.example.airline_reservation_web.Entity.Flight" %>
+
 <!DOCTYPE html>
 <html lang="en" style=" min-height: 100%;">
 <head>
@@ -52,6 +55,7 @@
 
       <div class="d-flex justify-content-center" style="margin-top: 2%;" >
           <form >
+              <% Flight flight = new Flight(); %>
             <div class="form-group">
                 <h1 class="display-4 text-center">Personal Details</h1>
               </div>
@@ -97,10 +101,10 @@
         </div>
         <div class="row" style="margin-top: 2%;">
             <div class="col">
-                <input class="form-control" type="text" name="dep_country" placeholder="Departure Country" readonly>
+                <input class="form-control" type="text" name="dep_country" placeholder= "<%flight.getFrom(); %>" readonly>
               </div>
               <div class="col">
-                <input type="text" class="form-control" name="dest_country" placeholder="Destination Country" readonly>
+                <input type="text" class="form-control" name="dest_country" placeholder="<%flight.getTo();%>" readonly>
 
               </div>
           </div>
@@ -116,7 +120,7 @@
           </div>
           <div class="row" style="margin-top: 2%;">
               <div class="col">
-                  <input class="form-control" id="airport" type="text" placeholder="Airport" readonly>
+                  <input class="form-control" id="airport" type="text" placeholder= "<%flight.getAirport();%>" readonly>
               </div>
               <div class="col">
                 <input type="text" class="form-control" placeholder="Number of luggage">
@@ -125,10 +129,10 @@
             
           <div class="row" style="margin-top: 2%;"> 
              <div class="col">
-                 <input class="form-control" type="text" name="arline" placeholder="Airline" readonly>
+                 <input class="form-control" type="text" name="arline" placeholder="<%flight.getAirline();%>" readonly>
               </div>
               <div class="col">
-                <input type="text" class="form-control" name="flight_number" placeholder="Flight number"readonly>
+                <input type="text" class="form-control" name="flight_number" placeholder="<%flight.getFlight_number();%>" readonly>
               </div>
           </div>
               
@@ -183,12 +187,5 @@
         <!-- Copyright -->
     </footer>
 
-<script>
-    var airport = $('#airport-td').text();
-
-    var airportText = airport.innerHTML;
-
-    $('#airport').attr('placeholder','Burgas International');
-</script>
 </body>
 </html>

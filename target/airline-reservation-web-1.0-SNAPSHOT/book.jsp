@@ -83,7 +83,7 @@
 </form>
 </div>
 
-<form>
+<form method="get" action="add-list">
   <div class="d-flex justify-content-center" style="margin-top: 5%;">
     <%
       try
@@ -116,14 +116,14 @@
       <%while(rs.next()){
       %>
         <tr>
-          <th scope="row"><%=rs.getString(2) %></th>
-          <td scope="row"><%=rs.getString(3) %></td>
-          <td scope="row"><%=rs.getString(4) %></td>
-          <td scope="row"><%=rs.getString(5) %></td>
-          <td scope="row"><%=rs.getString(6) %></td>
-          <td scope="row"><%=rs.getString(7) %></td>
-          <td scope="row" id="airport-td"><%=rs.getString(8) %></td>
-          <td scope="row"> <a class="btn btn-dark" href="booking">Book</a></td>
+          <th scope="row" name = "flight_numb"><%=rs.getString(2) %></th>
+          <td scope="row" name = "flight_name"><%=rs.getString(3) %></td>
+          <td scope="row" name = "from-td"><%=rs.getString(4) %></td>
+          <td scope="row" name = "to-td"><%=rs.getString(5) %></td>
+          <td scope="row" name = "date"><%=rs.getString(6) %></td>
+          <td scope="row" name = "time"><%=rs.getString(7) %></td>
+          <td scope="row" name="airport-td"><%=rs.getString(8) %></td>
+          <td scope="row"> <button class="btn btn-dark" type="submit">Book</button></td>
         </tr>
       <%
           st.close();
