@@ -97,17 +97,17 @@
         </div>
         <div class="row" style="margin-top: 2%;">
             <div class="col">
-                <input class="form-control" type="text" placeholder="Departure Country" readonly>
+                <input class="form-control" type="text" name="dep_country" placeholder="Departure Country" readonly>
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="Destination Country" readonly>
+                <input type="text" class="form-control" name="dest_country" placeholder="Destination Country" readonly>
 
               </div>
           </div>
 
           <div class="row" style="margin-top: 2%;">
               <div class="col">
-                  <input class="form-control" type="text" placeholder="Departure date & time" readonly>
+                  <input class="form-control" type="text" name="date" placeholder="Departure date & time" readonly>
               </div>
               <div class="col">
                   <input class="form-control" type="text" placeholder="Return date & time" readonly>
@@ -116,7 +116,7 @@
           </div>
           <div class="row" style="margin-top: 2%;">
               <div class="col">
-                  <input class="form-control" type="text" placeholder="Airport" readonly>
+                  <input class="form-control" id="airport" type="text" placeholder="Airport" readonly>
               </div>
               <div class="col">
                 <input type="text" class="form-control" placeholder="Number of luggage">
@@ -125,10 +125,10 @@
             
           <div class="row" style="margin-top: 2%;"> 
              <div class="col">
-                 <input class="form-control" type="text" placeholder="Airline" readonly>
+                 <input class="form-control" type="text" name="arline" placeholder="Airline" readonly>
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="Flight number"readonly>
+                <input type="text" class="form-control" name="flight_number" placeholder="Flight number"readonly>
               </div>
           </div>
               
@@ -182,5 +182,13 @@
         </div>
         <!-- Copyright -->
     </footer>
+
+<script>
+    var airport = $('#airport-td').text();
+
+    var airportText = airport.innerHTML;
+
+    $('#airport').attr('placeholder',airportText);
+</script>
 </body>
 </html>

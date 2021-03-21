@@ -122,7 +122,7 @@
           <td scope="row"><%=rs.getString(5) %></td>
           <td scope="row"><%=rs.getString(6) %></td>
           <td scope="row"><%=rs.getString(7) %></td>
-          <td scope="row"><%=rs.getString(8) %></td>
+          <td scope="row" id="airport-td"><%=rs.getString(8) %></td>
           <td scope="row"> <a class="btn btn-dark" href="booking">Book</a></td>
         </tr>
       <%
