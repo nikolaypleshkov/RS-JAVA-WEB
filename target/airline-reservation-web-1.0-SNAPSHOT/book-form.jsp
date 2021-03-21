@@ -169,13 +169,11 @@
             <div class="d-flex justify-content-center">
                 <button type="submit" class="btn btn-dark">Book Now</button>
             </div>
-            
-        </div>
-    
+
       </form>
       </div>
 
-    <footer class="bg-dark text-center text-white" style=" position: absolute;bottom: 0; width: 100%;">
+    <footer class="bg-dark text-center text-white" style="bottom: 0; width: 100%; margin-top: 5%;">
 
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
