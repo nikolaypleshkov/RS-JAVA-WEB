@@ -115,7 +115,6 @@
       <tbody>
       <%while(rs.next()){
       %>
-      <form method="post" action="booking">
         <tr>
           <th scope="row"><%=rs.getString(2) %></th>
           <td scope="row"><%=rs.getString(3) %></td>
@@ -124,10 +123,8 @@
           <td scope="row"><%=rs.getString(6) %></td>
           <td scope="row"><%=rs.getString(7) %></td>
           <td scope="row"><%=rs.getString(8) %></td>
-          <td scope="row"> <button type="submit" class="btn btn-dark" style="width: 60%;" name="book-btn">Book</button></td>
+          <td scope="row"> <a class="btn btn-dark" href="booking">Book</a></td>
         </tr>
-      </form>
-      
       <%
           st.close();
           con.close();

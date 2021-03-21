@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Book</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/src/main/webapp/assets/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -115,7 +115,6 @@
       <tbody>
       <%while(rs.next()){
       %>
-      <form method="post" action="booking">
         <tr>
           <th scope="row"><%=rs.getString(2) %></th>
           <td scope="row"><%=rs.getString(3) %></td>
@@ -124,10 +123,8 @@
           <td scope="row"><%=rs.getString(6) %></td>
           <td scope="row"><%=rs.getString(7) %></td>
           <td scope="row"><%=rs.getString(8) %></td>
-          <td scope="row"> <button type="submit" class="btn btn-dark" name="book-btn">Book</button></td>
+          <td scope="row"> <a class="btn btn-dark" href="booking">Book</a></td>
         </tr>
-      </form>
-
       <%
           st.close();
           con.close();
