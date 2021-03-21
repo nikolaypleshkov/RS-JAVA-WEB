@@ -97,24 +97,26 @@
         </div>
         <div class="row" style="margin-top: 2%;">
             <div class="col">
-                <input type="text" class="form-control" placeholder="Departure Country">
+                <input class="form-control" type="text" placeholder="Departure Country" readonly>
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="Destination Country">
+                <input type="text" class="form-control" placeholder="Destination Country" readonly>
+
               </div>
           </div>
 
           <div class="row" style="margin-top: 2%;">
               <div class="col">
-                <input type="text" class="form-control" placeholder="Departure date & time">
+                  <input class="form-control" type="text" placeholder="Departure date & time" readonly>
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="Return date & time">
+                  <input class="form-control" type="text" placeholder="Return date & time" readonly>
+
               </div>
           </div>
           <div class="row" style="margin-top: 2%;">
               <div class="col">
-                <input type="text" class="form-control" placeholder="Airport">
+                  <input class="form-control" type="text" placeholder="Airport" readonly>
               </div>
               <div class="col">
                 <input type="text" class="form-control" placeholder="Number of luggage">
@@ -123,10 +125,10 @@
             
           <div class="row" style="margin-top: 2%;"> 
              <div class="col">
-                <input type="text" class="form-control" placeholder="Airline">
+                 <input class="form-control" type="text" placeholder="Airline" readonly>
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="Flight number">
+                <input type="text" class="form-control" placeholder="Flight number"readonly>
               </div>
           </div>
               
