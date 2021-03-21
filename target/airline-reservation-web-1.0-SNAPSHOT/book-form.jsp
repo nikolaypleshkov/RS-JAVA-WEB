@@ -188,7 +188,7 @@
 
     var airportText = airport.innerHTML;
 
-    $('#airport').attr('placeholder',airportText);
+    $('#airport').attr('placeholder','Burgas International');
 </script>
 </body>
 </html>
