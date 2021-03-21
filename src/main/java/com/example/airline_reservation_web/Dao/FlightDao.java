@@ -1,9 +1,8 @@
-package com.example.airline_reservation_web.UserDao;
+package com.example.airline_reservation_web.Dao;
 
 import com.example.airline_reservation_web.Config.DataBaseConfig;
 import com.example.airline_reservation_web.Entity.Flight;
 
-import java.io.PrintWriter;
 import java.sql.*;
 
 public class FlightDao  {

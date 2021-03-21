@@ -1,6 +1,6 @@
 package com.example.airline_reservation_web.Controller;
 import com.example.airline_reservation_web.Entity.User;
-import com.example.airline_reservation_web.UserDao.LoginDao;
+import com.example.airline_reservation_web.Dao.LoginDao;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

@@ -1,7 +1,7 @@
 package com.example.airline_reservation_web.Controller;
 
 import com.example.airline_reservation_web.Entity.User;
-import com.example.airline_reservation_web.UserDao.RegDao;
+import com.example.airline_reservation_web.Dao.RegDao;
 
 
 import javax.servlet.ServletException;
